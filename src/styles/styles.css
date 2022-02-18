@@ -1,0 +1,249 @@
+ /**
+ * Global
+ */
+
+ body,
+ html {
+  min-height: 100vh;
+  margin: 0px;
+  padding: 0px;
+ }
+ 
+ html {
+  position: relative;
+ }
+ 
+ body {
+  background: #000;
+  color: #000;
+ }
+ 
+ a:active {
+  opacity: 0.7;
+ }
+ 
+ /**
+  * Content
+  */
+ 
+ i, em {
+  font-style: italic;
+ }
+ 
+ b, strong {
+  font-weight: bold;
+ }
+ 
+ ul, ol {
+  margin: 0;
+  padding: 0 0 0 1em;
+ }
+ 
+ /* img {
+  border: 0;
+  padding: 0;
+ } */
+  
+ /**
+  * Editor styles
+  */
+ 
+ @font-face {
+  font-family: "Titling Gothic FB Normal";
+  src: url("https://type.persona.co/TitlingGothicFBNormal/47bd3fa6-afb9-4d85-99ae-eba3a3eb028a-3.woff") format("woff");
+  font-style: normal;
+  font-weight: 200;
+ }
+ 
+ @font-face {
+  font-family: "Titling Gothic FB Normal";
+  src: url("https://type.persona.co/TitlingGothicFBNormal/64a50a70-d621-4211-9855-4eaf839a61ca-3.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+ }
+
+ @font-face {
+  font-family: "Titling Gothic FB Normal";
+  src: url("https://type.persona.co/TitlingGothicFBNormal/557af8b8-6cca-4bdd-acc8-faa739e5077c-3.woff") format("woff");
+  font-style: normal;
+  font-weight: bold;
+ }
+
+ .index_padded {
+  background-color: transparent;
+  padding: 1.2rem;
+  position: fixed;
+ }
+
+ .index_width {
+  text-align: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  display: -webkit-flex;
+  left: 0;
+  margin-left: auto;
+  right: 0;
+  margin-right: auto;
+  width: 100%;
+ }
+
+ .content_padded {
+  background-color: transparent;
+  padding: 1.2rem;
+  position: fixed;
+ }
+
+ .sphere {
+  color: #000;
+  background-color: #00FFFF;
+ }
+
+ .terrain {
+  color: #000;
+  background-color: #FF00FF;
+ }
+
+ .origami {
+  color: #000;
+  background-color: #FFFF00;
+ }
+
+ .content_width {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+ }
+ 
+ main {
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Titling Gothic FB Normal', Social;
+  font-style: normal;
+  line-height: 1;
+ }
+ 
+ main a {
+  color: rgba(255, 255, 255, 1);
+    padding-bottom: 0.05em;
+    border-bottom: 0em solid rgba(255, 255, 255, 0.31);
+    text-decoration: none;
+ }
+ 
+ main a.image-link,
+ main a.icon-link,
+ main a.image-link:hover,
+ main a.icon-link:hover {
+  border-bottom: 0;
+  padding-bottom: 0;
+ }
+ 
+ :root {
+  --bg-color: #000;
+  --typewriterSpeed: 0.5s;
+  --typewriterCharacters: 12;
+ }
+
+ h1 {
+  font-size: clamp(6rem, 4vw, 8rem);
+  position: relative;
+  width: max-content;
+
+  font-family: 'Titling Gothic FB Normal', Social;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+
+  line-height: 1;
+  color: rgba(255, 255, 255, 1);
+  text-rendering: optimizeLegibility;
+ }
+
+ h1::before,
+ h1::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+ }
+ 
+ h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 0.5s forwards;
+}
+
+h1::after {
+  width: 0.1em;
+  background: #fff;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 0.5s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+ h1 a {
+  color: rgba(255, 255, 255, 1);
+ }
+ 
+ h2 {
+  font-family: 'Titling Gothic FB Normal', Social;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-rendering: optimizeLegibility;
+ }
+ 
+ h2 a {
+  cursor: pointer;
+ }
+
+ h3 {
+  font-family: 'Titling Gothic FB Normal', Social;
+  font-style: normal;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 1);
+  text-rendering: optimizeLegibility;
+ }
+ 
+ h3 a {
+  color: rgba(255, 255, 255, 1);
+ }
+
+ mark {
+  background-color: yellow;
+  color: black;  
+ }
+
+ 
+ 
+img {
+   position: absolute;
+   transform: translate(+30%, +70%);
+   display: none;
+   pointer-events: none;
+   z-index: -1;
+ }
